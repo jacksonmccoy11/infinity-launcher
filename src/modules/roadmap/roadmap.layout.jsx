@@ -1,16 +1,103 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { css } from '@emotion/css';
+import useSound from 'use-sound';
+import spyCrab from './spyCrab.mp3';
 
-const RoadmapLayout = () => {
 
+
+const RoadmapLayout = () => { 
+
+    const [play] = useSound(spyCrab);
+
+    useEffect(() => {
+        play();
+    }, [play]);
+
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+
+    useEffect(() => {
+        play();
+    }, [play]);
+
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
+    
+    useEffect(() => {
+        play();
+    }, [play]);
     return <div className={styles.mainWrapper}>
+
+
         
         <div className={styles.main}>
 
-            <div className={styles.description}>
+            <div className={styles.descriptionWrapper}>
 
                 <h1>Roadmap</h1>
-                <p>The roadmap for Infinity Launcher is both ambitious and tentative.<br></br>
+                <p className={styles.description}>The roadmap for Infinity Launcher is both ambitious and tentative.<br></br>
                 The current items have been determined to be what our userbase wants and<br></br>
                 what our team thinks would be best to add in next.
                 </p>
@@ -102,21 +189,13 @@ const RoadmapLayout = () => {
 
             </ul>
 
-            <audio controls autoplay>
-                <source src="https://wiki.teamfortress.com/w/images/2/20/Demoman_paincrticialdeath03.wav" type="audio/x-wav"></source>
-            </audio>
-            
-            <audio controls autoplay>
-                <source src="https://wiki.teamfortress.com/w/images/8/83/Spy_paincrticialdeath01.wav" type="audio/x-wav"></source>
-            </audio>
-
         </div>
 
     </div>
 };
 
 const styles = {
-    description: css `
+    descriptionWrapper: css `
         margin-right: 30px;
         background-color: #222222;
         margin-bottom: 750px;
@@ -124,6 +203,11 @@ const styles = {
         padding-right: 7px;
         margin-top: 15px;
     `,
+
+    description: css `
+        background-color: #111111;
+    `,
+
     list: css`
         font-size: 25px;
         margin-top: 5px;

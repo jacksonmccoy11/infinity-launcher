@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\media",
+    "\\src\\modules",
+    "\\src\\modules\\community",
+    "\\src\\modules\\home",
+    "\\src\\modules\\navigation",
+    "\\src\\modules\\redux",
+    "\\src\\modules\\roadmap",
+    "\\src\\modules\\store"
+  ],
+  "SelectedNode": "\\src\\modules\\navigation\\navigation.jsx",
+  "PreviewInSolutionExplorer": false
+}

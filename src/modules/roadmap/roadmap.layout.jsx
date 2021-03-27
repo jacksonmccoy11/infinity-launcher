@@ -7,7 +7,7 @@ import spyCrab from './spyCrab.mp3';
 
 const RoadmapLayout = () => { 
 
-    const [play] = useSound(spyCrab);
+    const [play] = useSound(spyCrab, {playbackRate: 0.75, interrupt: true});
 
     useEffect(() => {
         play();
@@ -24,70 +24,73 @@ const RoadmapLayout = () => {
     useEffect(() => {
         play();
     }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
+    const [play2] = useSound(spyCrab, {playbackRate: 0.85, interrupt: true});
 
     useEffect(() => {
-        play();
-    }, [play]);
+        play2();
+    }, [play2]);
+    
+    useEffect(() => {
+        play2();
+    }, [play2]);
+    
+    useEffect(() => {
+        play2();
+    }, [play2]);
+    
+    useEffect(() => {
+        play2();
+    }, [play2]);
+    
+    useEffect(() => {
+        play2();
+    }, [play2]);
+    
+    useEffect(() => {
+        play2();
+    }, [play2]);
 
     useEffect(() => {
-        play();
-    }, [play]);
+        play2();
+    }, [play2]);
+    const [play3] = useSound(spyCrab, {playbackRate: 1.75, interrupt: true});
+
+    useEffect(() => {
+        play3();
+    }, [play3]);
     
     useEffect(() => {
-        play();
-    }, [play]);
+        play3();
+    }, [play3]);
     
     useEffect(() => {
-        play();
-    }, [play]);
+        play3();
+    }, [play3]);
     
     useEffect(() => {
-        play();
-    }, [play]);
+        play3();
+    }, [play3]);
     
     useEffect(() => {
-        play();
-    }, [play]);
+        play3();
+    }, [play3]);
+    const [play4] = useSound(spyCrab, {playbackRate: 0.35, interrupt: true});
+
+    useEffect(() => {
+        play4();
+    }, [play4]);
     
     useEffect(() => {
-        play();
-    }, [play]);
+        play4();
+    }, [play4]);
     
     useEffect(() => {
-        play();
-    }, [play]);
+        play4();
+    }, [play4]);
     
     useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
+        play4();
+    }, [play4]);
     return <div className={styles.mainWrapper}>
 
 

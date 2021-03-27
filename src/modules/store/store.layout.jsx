@@ -14,6 +14,7 @@ const StoreLayout = () => {
         <div className={styles.menuBar} >
 
             <div className={styles.menuBarButton} > Browse</div>
+            <input className={styles.input} type='text' placeholder='Search Store...' />
             
 
         </div>
@@ -172,14 +173,16 @@ const styles = {
         background-color: darkgrey;
         height: 5%;
         width: auto;
+        display: flex;
     `,
 
     menuBarButton: css`
-        outline: 4px solid #1e1e1e;
-        outline-offset: 4px;
-        background-color: darkgrey;
+        outline: 1px solid #1e1e1e;
+        outline-offset: 1px;
+        background-color: #333333;
         height: 100%;
         width: 10%;
+        text-align: center;
     `,
 
     shoppingWindow: css`
@@ -247,6 +250,19 @@ const styles = {
 
         outline: 4px solid #1e1e1e;
         outline-offset: 0px;
+    `,
+
+    input: css`
+        align-self: center;
+        
+        margin-left: auto;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.75);
+        border-style: solid;
+        border-width: 2px 2px 2px 2px;
+        border-radius: 6px;
+        border-color: #1e1e1e;
+        padding: 6px;
     `,
 }
 

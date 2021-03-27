@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/css';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../media/infinity-logo-icon.png';
+import history from '../redux/history';
 
 const PAGES = [
-    {
-        key: 'home',
-        displayName: 'Home'
-    },
     {
         key: 'store',
         displayName: 'Store'
     },
     {
-        key: 'contact',
-        displayName: 'Contact'
+        key: 'community',
+        displayName: 'Community'
+    },
+    {
+        key: 'roadmap',
+        displayName: 'Roadmap'
     }
 ];
 
@@ -27,15 +28,26 @@ const CustomLink = React.forwardRef((props, ref) => (
 
 const Navigation = () => {
     const { pathname } = useLocation();
-    const currentPage = pathname.split('/');
-    const [ selectedPage, setSelectedPage ] = useState(currentPage[1]);
+    const [ selectedPage, setSelectedPage ] = useState();
+
+    useEffect(() => {
+        const currentPage = pathname.split('/');
+
+        setSelectedPage(currentPage[1]);
+    }, [pathname])
 
     const onPageClick = page => {
         setSelectedPage(page);
     };
 
+    const toHome = () => {
+        history.push('/home');
+    };
+
     return <div className={styles.navigationBar}>
-        <img src={logo} alt='Infinity Logo' width='120' height='120' />
+        <div className={styles.logoContainer} onClick={toHome}>
+            <img src={logo} alt='Infinity Logo' width='80' height='80' />
+        </div>
         <div className={styles.navigationButtons}>
             {PAGES.map(page => {
                 return <Link to={`/${page.key}`} onClick={() => onPageClick(page.key)} isSelected={selectedPage === page.key} component={CustomLink}>{page.displayName}</Link>
@@ -54,14 +66,18 @@ const styles = {
         display: flex;
         flex-direction: column;
     `,
+    logoContainer: css`
+        margin-right: 10px;
+    `,
     navigationBar: css`
         background-color: rgba(0, 0, 0, 0.45);;
         padding-left: 10px;
         display: flex;
         flex-direction: row;
+        justify-content: center;
     `,
     navigationButtons: css `
-        align-self: flex-end;
+        align-self: center;
         font-size: 24px;
         display: flex;
         flex-direction: row;    

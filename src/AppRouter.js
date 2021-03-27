@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
     Switch,
     Route,
-    Redirect
+    Redirect,
+    withRouter
 } from "react-router-dom";
 import HomeLayout from './modules/home/home.layout';
+import CommunityLayout from './modules/community/community.layout';
+import StoreLayout from './modules/store/store.layout';
+import RoadmapLayout from './modules/roadmap/roadmap.layout';
+import Navigation from './modules/navigation/navigation';
+import './App.css';
 
-const AppRouter = () => {
-    return <Switch>
-        <Route path='/home'>
-            <HomeLayout />
-        </Route>
-        <Route path='/contact'>
-            <div>Contact</div>
-        </Route>
-        <Route path='/store'>
-            <div>Store</div>
-        </Route>
-        <Redirect to='/home' />
-    </Switch>;
+export class AppRouter extends Component {
+    
+    render() {
+        return <div className='content'>
+            <Navigation />
+            <Switch>
+                <Route path='/home' component={HomeLayout} />
+                <Route path='/community' component={CommunityLayout} />
+                <Route path='/store' component={StoreLayout} />
+                <Route path='/roadmap' component={RoadmapLayout} />
+                <Redirect to='/home' />
+            </Switch>
+        </div>;
+    }
 };
 
-export default AppRouter;
+export default withRouter(AppRouter);

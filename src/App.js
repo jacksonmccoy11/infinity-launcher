@@ -1,17 +1,18 @@
 import './App.css';
 import AppRouter from './AppRouter';
 import React from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
-import Navigation from './modules/navigation/navigation';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
+import history from './modules/redux/history';
+import store from './modules/redux/store';
 
 const App = () => {
     return <div className='App'>
-        <div className='content'>
-            <Router>
-                <Navigation />
+        <Provider store={store}>
+            <ConnectedRouter history={history}>
                 <AppRouter />
-            </Router>
-        </div>
+            </ConnectedRouter>
+        </Provider>
     </div>;
 };
 

@@ -3,7 +3,7 @@ import React from 'react';
 const HomeLayout = () => {
 
     return <div>
-        test
+        <button>click me</button>
     </div>
 };
 

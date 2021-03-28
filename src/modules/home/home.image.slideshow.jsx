@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { css } from '@emotion/css';
 import launchers from '../../media/launchers.png';
 import launcher from '../../media/launcher.png';
+import torrenting from '../../media/torrenting.png';
 import leftarrow from '../../media/leftarrow.png';
 import rightarrow from '../../media/rightarrow.png';
 
@@ -15,13 +16,18 @@ const SLIDESHOW = [
         img: launcher,
         alt: 'Our Launcher',
         description: 'With our integrated library, any games purchased from providers will automatically show up in your library. All of your game saves are synced to our seamless cloud servers ready to be played anywhere.'
+    },
+    {
+        img: torrenting,
+        alt: 'Torrenting Diagram',
+        description: 'Never wait hours on downloading games ever again! Our servers utilize torrenting software to allow for high performance downloads.'
     }
-]
+];
 
 const Slideshow = () => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
     const [manualNavigation, setManualNavigation] = useState(false);
-    const currentSlide = SLIDESHOW[currentSlideIndex];;
+    const currentSlide = SLIDESHOW[currentSlideIndex];
 
     useEffect(() => {
         const slideTimer = setInterval(() => {
@@ -93,6 +99,7 @@ const styles = {
         flex-grow: 1;
         justify-content: center;
         height: 400px;
+        margin-bottom: 20px;
     `
 };
 

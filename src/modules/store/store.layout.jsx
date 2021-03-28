@@ -8,148 +8,81 @@ import { css } from '@emotion/css';
 
 const StoreLayout = () => {
 
+    const onBrowseClick = () => {
+        alert('Eventually, we\'ll add more games');
+    };
+
     return <div className={styles.background}>
-        
-
         <div className={styles.menuBar} >
-
-            <div className={styles.menuBarButton} > Browse</div>
-            <input className={styles.input} type='text' placeholder='Search Store...' />
-            
-
+            <button className={styles.menuBarButton} onClick={onBrowseClick}>Browse</button>
         </div>
-
         <div className={styles.shoppingWindow} >
-
             <div className={styles.gameWindow}>
-
-                <div className={styles.gameTitle}>
-
-                    Team Fortress 2
-
-                </div>
-  
+                <div className={styles.gameTitle}>Team Fortress 2</div>
                 <img src={tf2Image} alt='Infinity Logo' height='40%' className={styles.gamePicture} />
-
                 <div className={styles.gameExtraPictures}>
-
                     <img src={tf2Image1} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={tf2Image2} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={tf2Image3} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={tf2Image4} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                 </div>
-
                 <div className={styles.gameDescription}>
-
                     Nine distinct classes provide a broad range of tactical abilities and personalities.
                     Constantly updated with new game modes, maps, equipment and, most importantly, hats!
                 </div>
-
-                <div className={styles.gamePrice}>
-
-                        Free on Steam
-                </div>
-
+                <div className={styles.gamePrice}>Free on Steam</div>
             </div>
 
             <div className={styles.gameWindow}>
-
-                <div className={styles.gameTitle}>
-
-                    Sid Meiers Civilization Vl
-
-                </div>
-
+                <div className={styles.gameTitle}>Sid Meiers Civilization VI</div>
                 <img src={"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_S1-2560x1440-7e8a0f1640e279cecbf9d4470c4e77e511645639.jpg?h=270&resize=1&w=480"} alt='Infinity Logo' height='40%' className={styles.gamePicture} />
-
                 <div className={styles.gameExtraPictures}>
-
                     <img src={"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_01-1920x1080-70a9ef372967ad2aa1c4561e4168b3e30d3369a1.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_03-1920x1080-52f7ab7189f7f45fc2473a91f0409ae012fab922.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_05-1920x1080-d4edbf7580a7205ec446441f517b7cac09a234a8.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_06-1920x1080-a18e1100499dabd465dd9f44c27cf9fb1171c3df.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                 </div>
-
                 <div className={styles.gameDescription}>
-
                     Civilization VI offers new ways to interact with your world, expand your empire across the map, advance your culture, 
                     and compete against history's greatest leaders to build a civilization that will stand the test of time.
                 </div>
-
-                <div className={styles.gamePrice}>
-
-                    $14.99 on Epic Games, Steam
-                </div>
-
+                <div className={styles.gamePrice}>$14.99 on Epic Games, Steam</div>
             </div>
 
             <div className={styles.gameWindow}>
-
-                <div className={styles.gameTitle}>
-
-                    The Outer Worlds
-
-                </div>
-
+                <div className={styles.gameTitle}>The Outer Worlds</div>
                 <img src={"https://cdn.cloudflare.steamstatic.com/steam/apps/578650/header.jpg?t=1616004214"} alt='Infinity Logo' height='40%' className={styles.gamePicture} />
-
                 <div className={styles.gameExtraPictures}>
-
                     <img src={"https://images.gog-statics.com/b28374df0053964e4be9aefbb9426b4010377adb8162d2ce89af7f53b9f4a21b_product_card_v2_thumbnail_271.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://images.gog-statics.com/1b605ab4971c095257d54457a1c2fe4246afe2db135f2a027d888627b5906e5d_product_card_v2_thumbnail_271.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://images.gog-statics.com/3925422a1e3f5c5b0d398483fa83c7994af9f218d7d114612df5500605120527_product_card_v2_thumbnail_271.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://images.gog-statics.com/ecf2bc4615221cae1b965b00b29f563d4d33ea9f40b4212198caee6d1973a84b_product_card_v2_thumbnail_271.jpg"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                 </div>
-
                 <div className={styles.gameDescription}>
-
                     The Outer Worlds is an award-winning single-player RPG from Obsidian Entertainment and Private Division. As you explore a space colony, 
                     the character you decide to become will determine how this player-driven story unfolds. 
                     In the colony's corporate equation, you are the unplanned variable.
-
                 </div>
-
-                <div className={styles.gamePrice}>
-
-                    $29.99 on GOG.COM
-                </div>
-
+                <div className={styles.gamePrice}>$29.99 on GOG.COM</div>
             </div>
 
             <div className={styles.gameWindow}>
-
-                <div className={styles.gameTitle}>
-
-                    Teardown
-
-                </div>
-
+                <div className={styles.gameTitle}>Teardown</div>
                 <img src={"https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/header.jpg?t=1614861328"} alt='Infinity Logo' height='40%' className={styles.gamePicture} />
-
                 <div className={styles.gameExtraPictures}>
-
                     <img src={"https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_d633f77b3caafe0277cee6a9608066cc5dc0eca0.600x338.jpg?t=1614861328"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_1539f339904fe5f7f000bd7bc9c9a05a4c56fe24.600x338.jpg?t=1614861328"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_3fae1fe06faa722bd32bc7c144311036f8da3909.1920x1080.jpg?t=1614861328"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                     <img src={"https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_0342f0121fc3569fb2f0eef4792f670522d7e588.600x338.jpg?t=1614861328"} alt='Infinity Logo' height='100%' width='25%' className={styles.gameExtraPicture} />
                 </div>
-
                 <div className={styles.gameDescription}>
-
                     Prepare the perfect heist in this simulated and fully destructible voxel world. Tear down walls with vehicles or explosives to create shortcuts. 
                     Stack objects to reach higher. Use the environment to your advantage in the most creative way you can think of.
                 </div>
-
-                <div className={styles.gamePrice}>
-
-                    $19.99 on Steam
-                </div>
-
+                <div className={styles.gamePrice}>$19.99 on Steam</div>
             </div>
-          
         </div>
-
-    </div>
+    </div>;
 };
 
 const styles = {
@@ -170,19 +103,27 @@ const styles = {
 
     menuBar: css`
         padding: 6px;
-        background-color: darkgrey;
+        background-color: #111111;
         height: 5%;
         width: auto;
         display: flex;
     `,
 
     menuBarButton: css`
-        outline: 1px solid #1e1e1e;
-        outline-offset: 1px;
-        background-color: #333333;
-        height: 100%;
-        width: 10%;
-        text-align: center;
+        width: 100px;
+        height: 35px;
+        background-color: blue;
+        color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        &:hover { opacity: 75% }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
     `,
 
     shoppingWindow: css`
@@ -206,11 +147,10 @@ const styles = {
 
     gameTitle: css`
         padding: 14px;
-        background-color: #333333;
+        background-color: #111111;
         height: 5%;
         text-align: center;
-        font-family: "Arial";
-        font-size: 1em;
+        font-size: 20px;
     `,
 
     gamePrice: css`
@@ -222,7 +162,6 @@ const styles = {
         outline-offset: 0px;
 
         text-align: center;
-        font-family: "Arial";
     `,
 
     gameDescription: css`
@@ -234,7 +173,6 @@ const styles = {
         outline-offset: 0px;
 
         text-align: left;
-        font-family: "Arial";
         overflow: hidden;
     `,
 

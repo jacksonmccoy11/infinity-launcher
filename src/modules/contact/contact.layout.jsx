@@ -132,27 +132,22 @@ const styles = {
     contact: css `
 
         background-color: #111111;    
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 10px;
         margin-left: 10px;
         margin-right: 10px;
 
     `,
 
     developer: css`
-
-        margin-top: 10px;
         background-color: #222222;
         padding-left: 10px;
         padding-right: 10px;
         max-width: 200px;
-
     `,
     developerExplanation: css`
         
         background-color: #111111;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding: 10px;
         min-height: 165px;
         max-height: 165px;
 
@@ -176,7 +171,7 @@ const styles = {
         flex-direction: row;
         justify-content: center;
         max-width: 500px;
-        
+        padding: 10px;
     `
 };
 

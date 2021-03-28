@@ -20,14 +20,14 @@ const RoadmapLayout = () => {
         
         <div className={styles.main}>
 
-            <div className={styles.descriptionWrapper}>
-
+            <div>
+                <div className={styles.descriptionWrapper}>
                 <h1>Roadmap</h1>
                 <p className={styles.description}>The roadmap for Infinity Launcher is both ambitious and tentative.<br></br>
                 The current items have been determined to be what our userbase wants and<br></br>
                 what our team thinks would be best to add in next.
                 </p>
-
+                </div>
             </div>
 
             <ul className={styles.listWrapper}> 
@@ -124,16 +124,13 @@ const styles = {
     descriptionWrapper: css `
         margin-right: 30px;
         background-color: #222222;
-        margin-bottom: 750px;
-        padding-left: 7px;
-        padding-right: 7px;
+        padding: 10px;
         margin-top: 15px;
     `,
 
     description: css `
         background-color: #111111;
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 10px;
     `,
 
     list: css`
@@ -165,6 +162,7 @@ const styles = {
     `,
     listWrapper: css `
         background-color: #222222;
+        padding-bottom: 10px;
     `
 };
 

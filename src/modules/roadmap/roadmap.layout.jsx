@@ -1,96 +1,19 @@
 import React, { useEffect } from 'react';
 import { css } from '@emotion/css';
 import useSound from 'use-sound';
-import spyCrab from './spyCrab.mp3';
+import SpyCrab from './SpyCrab.mp3';
+
 
 
 
 const RoadmapLayout = () => { 
 
-    const [play] = useSound(spyCrab, {playbackRate: 0.75, interrupt: true});
+    const [play] = useSound(SpyCrab, {playbackRate: 1, volume: 0.01, interrupt: true});
 
     useEffect(() => {
         play();
     }, [play]);
 
-    useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
-    
-    useEffect(() => {
-        play();
-    }, [play]);
-    const [play2] = useSound(spyCrab, {playbackRate: 0.85, interrupt: true});
-
-    useEffect(() => {
-        play2();
-    }, [play2]);
-    
-    useEffect(() => {
-        play2();
-    }, [play2]);
-    
-    useEffect(() => {
-        play2();
-    }, [play2]);
-    
-    useEffect(() => {
-        play2();
-    }, [play2]);
-    
-    useEffect(() => {
-        play2();
-    }, [play2]);
-    
-    useEffect(() => {
-        play2();
-    }, [play2]);
-
-    useEffect(() => {
-        play2();
-    }, [play2]);
-    const [play3] = useSound(spyCrab, {playbackRate: 1.75, interrupt: true});
-
-    useEffect(() => {
-        play3();
-    }, [play3]);
-    
-    useEffect(() => {
-        play3();
-    }, [play3]);
-    
-    useEffect(() => {
-        play3();
-    }, [play3]);
-    
-    useEffect(() => {
-        play3();
-    }, [play3]);
-    
-    useEffect(() => {
-        play3();
-    }, [play3]);
-    const [play4] = useSound(spyCrab, {playbackRate: 0.35, interrupt: true});
-
-    useEffect(() => {
-        play4();
-    }, [play4]);
-    
-    useEffect(() => {
-        play4();
-    }, [play4]);
-    
-    useEffect(() => {
-        play4();
-    }, [play4]);
-    
-    useEffect(() => {
-        play4();
-    }, [play4]);
     return <div className={styles.mainWrapper}>
 
 
@@ -209,6 +132,8 @@ const styles = {
 
     description: css `
         background-color: #111111;
+        padding-left: 5px;
+        padding-right: 5px;
     `,
 
     list: css`
@@ -222,10 +147,11 @@ const styles = {
         margin-left: 10px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: flex-start;
         background-color: #111111;
         margin-right: 45px;
-        padding: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
     `,
     main: css`
         display: flex;

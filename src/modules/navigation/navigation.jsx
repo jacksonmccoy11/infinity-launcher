@@ -21,6 +21,10 @@ const PAGES = [
     {
         key: 'roadmap',
         displayName: 'Roadmap'
+    },
+    {
+        key: 'contact',
+        displayName: 'Contact Us'
     }
 ];
 

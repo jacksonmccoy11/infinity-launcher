@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { css } from '@emotion/css';
 import useSound from 'use-sound';
-import SpyCrab from './SpyCrab.mp3';
+import SpyCrab from './spyCrab.mp3';
 
 
 

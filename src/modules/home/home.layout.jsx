@@ -1,6 +1,5 @@
 import React from 'react';
 import { css } from '@emotion/css';
-import space from '../../media/space.jpg'
 import Slideshow from './home.image.slideshow';
 
 const HomeLayout = () => {
@@ -8,7 +7,6 @@ const HomeLayout = () => {
     return <div className={styles.homeContent}>
         <div className={styles.titleBar}>
             <div className={styles.title}>Welcome to Infinity Launcher</div>
-            <input className={styles.input} type='text' placeholder='Search...' />
         </div>
         <Slideshow />
         <div className={styles.subtitle}>
@@ -37,16 +35,6 @@ const styles = {
     info: css`
         padding: 10px;
     `,
-    input: css`
-        align-self: center;
-        margin-right: 10px;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.65);
-        border-style: solid;
-        border-width: 2px 2px 2px 2px;
-        border-radius: 6px;
-        padding: 6px;
-    `,
     subtitle: css`
         font-size: 24px;
         padding: 10px;
@@ -55,8 +43,6 @@ const styles = {
         display: flex;
         flex-grow: 1;
         flex-direction: row;
-        background-image: url(${space});
-        background-size: cover;
         padding-top: 10px;
         padding-bottom: 20px;
         justify-content: space-between;

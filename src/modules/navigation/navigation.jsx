@@ -3,6 +3,7 @@ import { css } from '@emotion/css';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../media/infinity-logo-icon.png';
 import history from '../redux/history';
+import space from '../../media/space.jpg'
 
 const PAGES = [
     {
@@ -64,13 +65,31 @@ const Navigation = () => {
                 </div>
             })}
         </div>
+        <input className={styles.input} type='text' placeholder='Search...' />
     </div>;
 };
 
 const styles = {
+    input: css`
+        right: 5px;
+        position: absolute;
+        align-self: center;
+        margin-right: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.65);
+        border-style: solid;
+        border-width: 2px 2px 2px 2px;
+        border-radius: 6px;
+        padding: 6px;
+    `,
     link: css `
         color: white;
         text-decoration: none;
+        text-shadow: 
+            -1px -1px 0 #000,
+            1px -1px 0 #000,
+            -1px 1px 0 #000,
+            1px 1px 0 #000;
     `,
     linkContainer: css`
         display: flex;
@@ -90,6 +109,8 @@ const styles = {
         top: 0;
         width: 100%;
         border-bottom: 2px solid black;
+        background-image: url(${space});
+        background-size: cover;
     `,
     navigationButton: css `
         position: relative;
@@ -101,7 +122,7 @@ const styles = {
     `,
     navigationButtons: css `
         height: 74px;
-        font-size: 22px;
+        font-size: 24px;
         display: flex;
         flex-direction: row;
     `,

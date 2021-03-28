@@ -7,13 +7,11 @@ import history from './modules/redux/history';
 import store from './modules/redux/store';
 
 const App = () => {
-    return <div className='App'>
-        <Provider store={store}>
-            <ConnectedRouter history={history}>
-                <AppRouter />
-            </ConnectedRouter>
-        </Provider>
-    </div>;
+    return <Provider store={store}>
+        <ConnectedRouter history={history}>
+            <AppRouter />
+        </ConnectedRouter>
+    </Provider>;
 };
 
 export default App;

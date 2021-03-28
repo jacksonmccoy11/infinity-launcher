@@ -6,6 +6,10 @@ import history from '../redux/history';
 
 const PAGES = [
     {
+        key: 'home',
+        displayName: 'Home'
+    },
+    {
         key: 'store',
         displayName: 'Store'
     },
@@ -19,10 +23,9 @@ const PAGES = [
     }
 ];
 
-const CustomLink = React.forwardRef((props, ref) => (    
+const CustomLink = React.forwardRef(({href, onClick, component, children}, ref) => (    
     <div className={styles.linkContainer}>
-        <a ref={ref} className={styles.link} {...props}>{props.children}</a>
-        {props.isSelected && <span className={styles.selectedBar} />}
+        <a ref={ref} className={styles.link} href={href} onClick={onClick} component={component}>{children}</a>
     </div>
 ));
 
@@ -34,7 +37,7 @@ const Navigation = () => {
         const currentPage = pathname.split('/');
 
         setSelectedPage(currentPage[1]);
-    }, [pathname])
+    }, [pathname]);
 
     const onPageClick = page => {
         setSelectedPage(page);
@@ -46,11 +49,19 @@ const Navigation = () => {
 
     return <div className={styles.navigationBar}>
         <div className={styles.logoContainer} onClick={toHome}>
-            <img src={logo} alt='Infinity Logo' width='80' height='80' />
+            <img src={logo} alt='Infinity Logo' width='70' height='70' />
         </div>
         <div className={styles.navigationButtons}>
             {PAGES.map(page => {
-                return <Link to={`/${page.key}`} onClick={() => onPageClick(page.key)} isSelected={selectedPage === page.key} component={CustomLink}>{page.displayName}</Link>
+                return <div className={styles.navigationButton} key={page.key}>
+                    <Link
+                        to={`/${page.key}`}
+                        onClick={() => onPageClick(page.key)}
+                        component={CustomLink}>
+                            {page.displayName}
+                    </Link>
+                    {selectedPage === page.key && <span className={styles.selectedBar} />}
+                </div>
             })}
         </div>
     </div>;
@@ -60,7 +71,6 @@ const styles = {
     link: css `
         color: white;
         text-decoration: none;
-        padding: 14px;
     `,
     linkContainer: css`
         display: flex;
@@ -68,27 +78,40 @@ const styles = {
     `,
     logoContainer: css`
         margin-right: 10px;
+        cursor:pointer;
     `,
     navigationBar: css`
-        background-color: rgba(0, 0, 0, 0.45);;
-        padding-left: 10px;
+        background-color: #222222;
         display: flex;
         flex-direction: row;
+        width: 100%;
         justify-content: center;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        border-bottom: 2px solid black;
     `,
-    navigationButtons: css `
-        align-self: center;
-        font-size: 24px;
+    navigationButton: css `
+        position: relative;
         display: flex;
-        flex-direction: row;    
-    `,
-    selectedBar: css `
+        flex-direction: column;
+        justify-content: center;
         margin-left: 14px;
         margin-right: 14px;
+    `,
+    navigationButtons: css `
+        height: 74px;
+        font-size: 22px;
+        display: flex;
+        flex-direction: row;
+    `,
+    selectedBar: css `
+        position: absolute;
         margin-bottom: 4px;
-        flex-grow: 1;
-        height: 3px;
-        background-color: blue;
+        border: 1px solid #0026ff;
+        border-radius: 6px;
+        bottom: 0;
+        width: 100%;
     `
 };
 

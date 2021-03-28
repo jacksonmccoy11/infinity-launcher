@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/css';
 import space from '../../media/space.jpg'
+import Slideshow from './home.image.slideshow';
 
 const HomeLayout = () => {
 
@@ -9,6 +10,7 @@ const HomeLayout = () => {
             <div className={styles.title}>Welcome to Infinity Launcher</div>
             <input className={styles.input} type='text' placeholder='Search...' />
         </div>
+        <Slideshow />
         <div className={styles.subtitle}>
             What are we?
         </div>
@@ -21,11 +23,16 @@ const HomeLayout = () => {
 };
 
 const styles = {
+    gameContainer: css`
+        display: flex;
+        flex-grow: 1;
+        justify-content: center;
+    `,
     homeContent: css`
         display: flex;
         justify-content: center;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: #222222
     `,
     info: css`
         padding: 10px;
@@ -34,7 +41,7 @@ const styles = {
         align-self: center;
         margin-right: 10px;
         color: white;
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: rgba(0, 0, 0, 0.65);
         border-style: solid;
         border-width: 2px 2px 2px 2px;
         border-radius: 6px;

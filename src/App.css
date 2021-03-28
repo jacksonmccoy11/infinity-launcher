@@ -1,17 +1,13 @@
-.App {
-  background-color: #333333;
-  height: 100vh;
+.app {
+  position: relative;
 }
 
 .content {
-  margin-left: 5%;
-  margin-right: 5%;
+  padding-top: 84px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #333333;
   color: white;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {

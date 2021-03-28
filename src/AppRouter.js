@@ -15,15 +15,17 @@ import './App.css';
 export class AppRouter extends Component {
     
     render() {
-        return <div className='content'>
+        return <div className='app'>
             <Navigation />
-            <Switch>
-                <Route path='/home' component={HomeLayout} />
-                <Route path='/community' component={CommunityLayout} />
-                <Route path='/store' component={StoreLayout} />
-                <Route path='/roadmap' component={RoadmapLayout} />
-                <Redirect to='/home' />
-            </Switch>
+            <div className='content'>
+                <Switch>
+                    <Route path='/home' component={HomeLayout} />
+                    <Route path='/community' component={CommunityLayout} />
+                    <Route path='/store' component={StoreLayout} />
+                    <Route path='/roadmap' component={RoadmapLayout} />
+                    <Redirect to='/home' />
+                </Switch>
+            </div>
         </div>;
     }
 };

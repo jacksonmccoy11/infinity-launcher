@@ -65,6 +65,7 @@ const CommunityLayout = () => {
 
         newThread.push({ user: 'Unknown User', title, message, replies: [] });
         setCurrentThreads(newThread);
+        setTitle('');
         setMessage('');
     };
 

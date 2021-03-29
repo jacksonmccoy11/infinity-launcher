@@ -3,6 +3,7 @@ import { css } from '@emotion/css';
 import launchers from '../../media/launchers.png';
 import launcher from '../../media/launcher.png';
 import torrenting from '../../media/torrenting.png';
+import money from '../../media/money.jpg';
 import leftarrow from '../../media/leftarrow.png';
 import rightarrow from '../../media/rightarrow.png';
 
@@ -21,6 +22,11 @@ const SLIDESHOW = [
         img: torrenting,
         alt: 'Torrenting Diagram',
         description: 'Never wait hours on downloading games ever again! Our servers utilize torrenting software to allow for high performance downloads.'
+    },
+    {
+        img: money,
+        alt: 'Money Saving',
+        description: 'Have you ever purchased a game on one launcher only to find it cheaper on another? Our product utilizes a price comparison tool to find the lowest prices across all verified launchers to find the lowest price for you.'
     }
 ];
 

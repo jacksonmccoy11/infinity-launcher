@@ -5,6 +5,7 @@ import tf2Image2 from '../../media/tf2Image2.png';
 import tf2Image3 from '../../media/tf2Image3.png';
 import tf2Image4 from '../../media/tf2Image4.png';
 import { css } from '@emotion/css';
+import history from '../redux/history';
 
 const StoreLayout = () => {
 
@@ -12,11 +13,15 @@ const StoreLayout = () => {
         alert('Eventually, we\'ll add more games');
     };
 
+    const toPayment = game => {
+        history.push(`/payment/${game}`);
+    };
+
     return <div className={styles.background}>
-        <div className={styles.menuBar} >
+        <div className={styles.menuBar}>
             <button className={styles.menuBarButton} onClick={onBrowseClick}>Browse</button>
         </div>
-        <div className={styles.shoppingWindow} >
+        <div className={styles.shoppingWindow}>
             <div className={styles.gameWindow}>
                 <div className={styles.gameTitle}>Team Fortress 2</div>
                 <img src={tf2Image} alt='Infinity Logo' height='40%' className={styles.gamePicture} />
@@ -30,7 +35,10 @@ const StoreLayout = () => {
                     Nine distinct classes provide a broad range of tactical abilities and personalities.
                     Constantly updated with new game modes, maps, equipment and, most importantly, hats!
                 </div>
-                <div className={styles.gamePrice}>Free on Steam</div>
+                <div className={styles.gamePrice}>
+                    <div>Free on Steam</div>
+                    <button className={styles.purchaseButton} onClick={() => toPayment('team-fortress-2')}>Purchase</button>
+                </div>
             </div>
 
             <div className={styles.gameWindow}>
@@ -46,7 +54,10 @@ const StoreLayout = () => {
                     Civilization VI offers new ways to interact with your world, expand your empire across the map, advance your culture, 
                     and compete against history's greatest leaders to build a civilization that will stand the test of time.
                 </div>
-                <div className={styles.gamePrice}>$14.99 on Epic Games, Steam</div>
+                <div className={styles.gamePrice}>
+                    <div>$14.99 on Epic Games, Steam</div>
+                    <button className={styles.purchaseButton} onClick={() => toPayment('sid-meiers-civilization-6')}>Purchase</button>
+                </div>
             </div>
 
             <div className={styles.gameWindow}>
@@ -63,7 +74,10 @@ const StoreLayout = () => {
                     the character you decide to become will determine how this player-driven story unfolds. 
                     In the colony's corporate equation, you are the unplanned variable.
                 </div>
-                <div className={styles.gamePrice}>$29.99 on GOG.COM</div>
+                <div className={styles.gamePrice}>
+                    <div>$29.99 on GOG.COM</div>
+                    <button className={styles.purchaseButton} onClick={() => toPayment('the-outer-worlds')}>Purchase</button>
+                </div>
             </div>
 
             <div className={styles.gameWindow}>
@@ -79,7 +93,10 @@ const StoreLayout = () => {
                     Prepare the perfect heist in this simulated and fully destructible voxel world. Tear down walls with vehicles or explosives to create shortcuts. 
                     Stack objects to reach higher. Use the environment to your advantage in the most creative way you can think of.
                 </div>
-                <div className={styles.gamePrice}>$19.99 on Steam</div>
+                <div className={styles.gamePrice}>
+                    <div>$19.99 on Steam</div>
+                    <button className={styles.purchaseButton} onClick={() => toPayment('teardown')}>Purchase</button>
+                </div>
             </div>
         </div>
     </div>;
@@ -87,13 +104,11 @@ const StoreLayout = () => {
 
 const styles = {
     link: css`
-        color: white;
         text-decoration: none;
         padding: 14px;
     `,
 
     background: css`
-        color: white;
         text-decoration: none;
         padding: 14px;
         background-color: #282828;
@@ -112,8 +127,8 @@ const styles = {
     menuBarButton: css`
         width: 100px;
         height: 35px;
+        color: #ededed;
         background-color: blue;
-        color: white;
         border: 2px solid black;
         border-radius: 10px;
         font-size: 20px;
@@ -194,7 +209,6 @@ const styles = {
         align-self: center;
         
         margin-left: auto;
-        color: white;
         background-color: rgba(0, 0, 0, 0.75);
         border-style: solid;
         border-width: 2px 2px 2px 2px;
@@ -202,6 +216,22 @@ const styles = {
         border-color: #1e1e1e;
         padding: 6px;
     `,
+    purchaseButton: css`
+        margin-top: 8px;
+        width: 120px;
+        height: 35px;
+        background-color: blue;
+        color: #ededed;
+        border: 2px solid black;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        &:hover { opacity: 75% }
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    `
 }
 
 export default StoreLayout;

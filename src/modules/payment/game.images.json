@@ -1,0 +1,78 @@
+{
+    "team-fortress-2": {
+        "name": "Team Fortress 2",
+        "launchers": [
+            {
+                "name": "Steam",
+                "price": "0.00"
+            }
+        ],
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/440/header.jpg?t=1592263852",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/440/0000002574.600x338.jpg?t=1592263852",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/440/0000002576.600x338.jpg?t=1592263852",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/440/0000002581.600x338.jpg?t=1592263852",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/440/0000002575.600x338.jpg?t=1592263852"
+        ],
+        "description": "Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!"
+    },
+    "sid-meiers-civilization-6": {
+        "name": "Sid Meiers Civilization VI",
+        "launchers": [
+            {
+                "name": "Steam",
+                "price": "14.99"
+            },
+            {
+                "name": "Epic Games",
+                "price": "14.99"
+            }
+        ],
+        "images": [
+            "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_S1-2560x1440-7e8a0f1640e279cecbf9d4470c4e77e511645639.jpg?h=270&resize=1&w=480",
+            "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_01-1920x1080-70a9ef372967ad2aa1c4561e4168b3e30d3369a1.jpg",
+            "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_03-1920x1080-52f7ab7189f7f45fc2473a91f0409ae012fab922.jpg",
+            "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_05-1920x1080-d4edbf7580a7205ec446441f517b7cac09a234a8.jpg",
+            "https://cdn2.unrealengine.com/Diesel%2Fproductv2%2Fsid-meiers-civilization-vl%2Fhome%2FEGS_SidMeiersCivilizationVI_FiraxisGames_G1A_06-1920x1080-a18e1100499dabd465dd9f44c27cf9fb1171c3df.jpg"
+        ],
+        "description": "Civilization VI offers new ways to interact with your world, expand your empire across the map, advance your culture, and compete against history's greatest leaders to build a civilization that will stand the test of time."
+    },
+    "the-outer-worlds": {
+        "name": "The Outer Worlds",
+        "launchers": [
+            {
+                "name": "GOG.COM",
+                "price": "29.99"
+            },
+            {
+                "name": "Steam",
+                "price": "59.99"
+            }
+        ],
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/578650/header.jpg?t=1616004214",
+            "https://images.gog-statics.com/b28374df0053964e4be9aefbb9426b4010377adb8162d2ce89af7f53b9f4a21b_product_card_v2_thumbnail_271.jpg",
+            "https://images.gog-statics.com/1b605ab4971c095257d54457a1c2fe4246afe2db135f2a027d888627b5906e5d_product_card_v2_thumbnail_271.jpg",
+            "https://images.gog-statics.com/3925422a1e3f5c5b0d398483fa83c7994af9f218d7d114612df5500605120527_product_card_v2_thumbnail_271.jpg",
+            "https://images.gog-statics.com/ecf2bc4615221cae1b965b00b29f563d4d33ea9f40b4212198caee6d1973a84b_product_card_v2_thumbnail_271.jpg"
+        ],
+        "description": "The Outer Worlds is an award-winning single-player RPG from Obsidian Entertainment and Private Division. As you explore a space colony, the character you decide to become will determine how this player-driven story unfolds. In the colony's corporate equation, you are the unplanned variable."
+    },
+    "teardown": {
+        "name": "Teardown",
+        "launchers": [
+            {
+                "name": "Steam",
+                "price": "19.99"
+            }
+        ],
+        "images": [
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/header.jpg?t=1614861328",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_d633f77b3caafe0277cee6a9608066cc5dc0eca0.600x338.jpg?t=1614861328",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_1539f339904fe5f7f000bd7bc9c9a05a4c56fe24.600x338.jpg?t=1614861328",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_3fae1fe06faa722bd32bc7c144311036f8da3909.1920x1080.jpg?t=1614861328",
+            "https://cdn.cloudflare.steamstatic.com/steam/apps/1167630/ss_0342f0121fc3569fb2f0eef4792f670522d7e588.600x338.jpg?t=1614861328"
+        ],
+        "description": "Prepare the perfect heist in this simulated and fully destructible voxel world. Tear down walls with vehicles or explosives to create shortcuts. Stack objects to reach higher. Use the environment to your advantage in the most creative way you can think of."
+    }
+}
